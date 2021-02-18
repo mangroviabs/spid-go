@@ -73,9 +73,7 @@ func (authnreq *AuthnRequest) XML(binding SAMLBinding) []byte {
 	
 	<saml:Issuer
         NameQualifier="{{ .SP.EntityID }}"
-        Format="urn:oasis:names:tc:SAML:2.0:nameid-format:entity">
-        {{ .SP.EntityID }}
-	</saml:Issuer>
+        Format="urn:oasis:names:tc:SAML:2.0:nameid-format:entity">{{ .SP.EntityID }}</saml:Issuer>
 
 	{{ .SignatureTemplate }}
 
